@@ -7,6 +7,9 @@ void setup(){
   while (!Serial){
     ;
   }
+  Serial.println("Hello World!");
+  count = toggle = 0;
+  digitalWrite(PIN_LED, toggle);
 }
 
 void loop(){
@@ -17,5 +20,8 @@ void loop(){
 }
 
 int toggle_state(int toggle){
-  return toggle;
+  if(toggle == 0){
+    return 1;
+  }
+  return 0;
 }
