@@ -7,12 +7,12 @@ void setup(){
   while (!Serial){
     ;
   }
-  toggle = 0;
-  digitalWrite(PIN_LED, toggle);
-  delay(1000);
 }
 
 void loop(){
+  toggle = 0;
+  digitalWrite(PIN_LED, toggle);
+  delay(1000);
   for(int i = 0; i < 11; i++){
   toggle = toggle_state(toggle);
   digitalWrite(PIN_LED, toggle);
